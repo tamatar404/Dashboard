@@ -1,0 +1,11 @@
+:root { --forest-green: #a3b18a; --sky-blue: #caf0f8; --paper: #fffdf0; }
+body { background: linear-gradient(180deg, var(--sky-blue), #d8e2dc); font-family: sans-serif; padding: 20px; display: flex; justify-content: center; }
+.container { width: 100%; max-width: 450px; }
+.card { background: white; padding: 20px; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+#clock-trigger { position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; border-radius: 50%; background: var(--forest-green); border: none; z-index: 100; }
+#timer-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 1000; }
+#timer-popup.active { display: flex; }
+.timer-card { width: 80%; text-align: center; position: relative; }
+.task-item { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #eee; }
+.checked { text-decoration: line-through; opacity: 0.5; }
+.note-item { background: var(--paper); padding: 15px; margin-top: 10px; border-left: 5px solid var(--forest-green); border-radius: 5px; }

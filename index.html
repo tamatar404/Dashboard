@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghibli Sanctuary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="clock-trigger" onclick="toggleTimerPopup()">🕒</button>
+
+    <div class="container">
+        <header>
+            <h1>Forest Sanctuary</h1>
+            <p>Peaceful Productivity</p>
+        </header>
+
+        <div id="timer-popup">
+            <section class="card timer-card">
+                <button class="close-btn" onclick="toggleTimerPopup()">✕</button>
+                <h2>Focus Timer</h2>
+                <div id="timer-display">25:00</div>
+                <div class="button-group">
+                    <button id="pauseResumeBtn" onclick="handleTimerControl()">Start</button>
+                    <button onclick="resetTimer()" class="btn-alt">Reset</button>
+                </div>
+            </section>
+        </div>
+
+        <section class="card">
+            <h2>Today's Quests</h2>
+            <div class="input-row">
+                <input type="text" id="taskInput" placeholder="Add a quest...">
+                <button onclick="addTask()">+</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Field Notes</h2>
+            <textarea id="notesInput" placeholder="Write your thoughts..."></textarea>
+            <button onclick="saveNote()" style="width: 100%;">Save to Journal</button>
+            <div id="notesList"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
